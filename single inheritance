@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+class room1
+{
+    protected:
+    int l,b,h,a,v;
+    public:
+    void area()
+    {
+    cout<<"enter value of length and breadth:"<<endl;
+    cin>>l>>b;
+    a=l*b;
+    cout<<"area of room is"<<a<<endl;
+    }
+};
+class room2:public room1
+{
+    public:
+    void volume()
+    {
+        cout<<"enter value of length,breadth and height:"<<endl;
+        cin>>l>>b>>h;
+        v=l*b*h;
+        cout<<"volume of room"<<v;
+    }
+};
+int main()
+{
+    room2 c1;
+    c1.area();
+    c1.volume();
+    return 0;
+    
+}
